@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href='./header.css'>
+    <link rel="stylesheet" href='./reset2.css'>
+    <title>Sample header</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-nav-container">
+            <img class="logo" src="./logo.png"/>
+            <ul class="header-nav">
+                <li class="header-link"><i id="1" onclick="setSelected('1')" class="material-icons link-icon">bolt</i><div class="link-text">Upload</div></li>
+                <li class="header-link"><i id="2" onclick="setSelected('2')" class="material-icons link-icon">campaign</i><div class="link-text">Announcements</div></li>
+                <li class="header-link"><i id="3" onclick="setSelected('3')" class="material-icons link-icon">library_books</i><div class="link-text">Portfolio</div></li>
+                <li class="header-link"><i id="4" onclick="setSelected('4')" class="material-icons link-icon">print</i><div class="link-text">Documents</div></li>
+                <li class="header-link"><i id="5" onclick="setSelected('5')" class="material-icons link-icon">account_circle</i><div class="link-text">Account</div></li>
+                <li class="header-link"><i id="6" onclick="setSelected('6')" class="material-icons link-icon">logout</i><div class="link-text">Log Out</div></li>
+            </ul>
+        </div>
+        <div class="header-searchbar">
+            <input type="text" placeholder="Search Startups" class="search-input" />
+            <i class="material-icons search-icon">search</i>
+        </div>
+    </div>
+
+</body>
+<script>
+    function setSelected(id){
+        let icons = document.querySelectorAll('.link-icon')
+        icons.forEach(icon =>{
+            icon.classList.remove("selected")
+        })
+        document.getElementById(id).classList.add('selected')
+    }
+</script>
+</html>
