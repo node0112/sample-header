@@ -6,6 +6,7 @@
 }
 .header{
     height: 80px;
+    width: 100%;
 }
 
 
@@ -15,14 +16,13 @@
     box-shadow: -1px -1px 10px gray;
     border-radius: 20%;
     object-fit: cover;
-    margin-left: 20px;
     transition: all 0.5s;
     cursor: pointer;
+    background-color: whitesmoke;
 }
 .logo:hover{
     box-shadow: -8px -5px 10px darkgray;
     scale: 1.05;
-    background-color: #71CA92;
 }
 
 .header-nav-container{
@@ -69,7 +69,7 @@
 
 
 .header-searchbar{
-    width: 20%;
+    width: 300px;
     box-shadow: 0 0 20PX darkgray;
     border-radius: 24px;
     margin-right: 33px;
@@ -103,4 +103,53 @@
 .search-icon:hover{
     background-color: #4bcd7b;
     color: black;
+}
+
+
+@media (max-width: 1000px) {
+    .header-searchbar{
+        display: none;
+    }
+    .header-nav-container{
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 30px;
+        margin: 50px;
+        height: 100%;
+        align-items: center;
+        gap: 5vh;
+    }
+    .header{
+        height: 80vh;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5vh;
+    }
+    .header-nav{
+        flex-direction: column;
+        width: 60px;
+        height: 100%;
+        margin: 0;
+        align-items: center;
+        padding: 0;
+    }
+    .logo{
+        margin-left: 0px;
+    }
+    .link-text{
+        left: 50px;
+        top: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header-searchbar{
+        background-color: whitesmoke;
+        font-size: 0.5em;
+    }
+    .search-icon{
+        background-color: whitesmoke;
+        color: red;
+    }
 }
