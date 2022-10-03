@@ -13,6 +13,8 @@
     <div class="header">
         <div class="header-nav-container">
             <img class="logo" src="./logo.png"/>
+            <i onclick="openSidebar()" class="material-icons open-sidebar link-icon" style="font-size: 32px;">menu</i>
+            <i onclick="closeSidebar()" class="material-icons close-sidebar link-icon hide" style="font-size: 32px; color: red;">close</i>
             <ul class="header-nav">
                 <li class="header-link"><i id="1" onclick="setSelected('1')" class="material-icons link-icon">bolt</i><div class="link-text">Upload</div></li>
                 <li class="header-link"><i id="2" onclick="setSelected('2')" class="material-icons link-icon">campaign</i><div class="link-text">Announcements</div></li>
@@ -36,6 +38,17 @@
             icon.classList.remove("selected")
         })
         document.getElementById(id).classList.add('selected')
+    }
+    function openSidebar(){
+        console.log('called')
+        document.querySelector('.header-nav').style.transform="translateX(0px)"
+        document.querySelector('.open-sidebar').classList.add('hide')
+        document.querySelector('.close-sidebar').classList.remove('hide')
+    }
+    function closeSidebar(){
+        document.querySelector('.header-nav').style.transform="translateX(-100px)"
+        document.querySelector('.open-sidebar').classList.remove('hide')
+        document.querySelector('.close-sidebar').classList.add('hide')
     }
 </script>
 </html>
